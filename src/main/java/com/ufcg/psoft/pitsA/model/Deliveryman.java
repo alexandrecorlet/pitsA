@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+import java.util.Objects;
+
 @Entity
 @Table(name = "Deliverymen")
 public class Deliveryman {
@@ -58,6 +60,27 @@ public class Deliveryman {
 
     public Vehicle getVehicle() {
         return vehicle;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Deliveryman deliveryman)) {
+            return false;
+        } else if (this == o) {
+            return true;
+        }
+
+        return id.equals(deliveryman.getId());
+
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 
 }
