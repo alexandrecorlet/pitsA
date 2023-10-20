@@ -2,12 +2,34 @@ package com.ufcg.psoft.pitsA.model;
 
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
+
+@Entity
+@Table(name = "Business")
 public class Business {
 
+    @JsonProperty("Id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id")
     private Long id;
 
+    @JsonProperty("Name")
+    @Column(
+            name = "name",
+            nullable = false
+    )
     private String name;
 
+    @JsonIgnore
+    @Size(min = 6, max = 6)
+    @Column(
+            name = "password",
+            nullable = false
+    )
     private String password;
 
     // TODO: deliverymanRegistrations Map
