@@ -9,23 +9,35 @@ import jakarta.validation.constraints.Size;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Deliverymen")
+@Table(name = "Deliveryman")
 public class Deliveryman {
 
     @JsonProperty("Id")
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id")
     private Long id;
 
     @JsonProperty("Name")
+    @Column(
+            name = "name",
+            nullable = false
+    )
     private String name;
 
     @JsonIgnore
     @Size(min = 6, max = 6 )
+    @Column(
+            name = "name",
+            nullable = false
+    )
     private String password;
 
     @JsonProperty("Vehicle")
-    @NotNull
+    @Column(
+            name = "name",
+            nullable = false
+    )
     private Vehicle vehicle;
 
     public Deliveryman() {
