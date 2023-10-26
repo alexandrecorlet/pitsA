@@ -12,31 +12,18 @@ import java.util.Objects;
 public class Customer {
 
     @JsonProperty("Name")
-    @Column(
-            name = "name",
-            nullable = false
-    )
     private String name;
 
     @JsonIgnore
     @Size(min = 6, max = 6)
-    @Column(
-            name = "password",
-            nullable = false
-    )
     private String password;
 
     @JsonProperty("Id")
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id")
     private Long id;
 
     @JsonProperty("Address")
-    @Column(
-            name = "address",
-            nullable = false
-    )
     private String address;
 
     // TODO: Attribute: Registrations
