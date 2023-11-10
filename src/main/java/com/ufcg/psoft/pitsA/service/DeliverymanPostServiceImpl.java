@@ -1,10 +1,9 @@
-package com.ufcg.psoft.pitsA.service.deliveryman;
+package com.ufcg.psoft.pitsA.service;
 
 import com.ufcg.psoft.pitsA.dto.DeliverymanDTO;
 import com.ufcg.psoft.pitsA.model.Deliveryman;
 import com.ufcg.psoft.pitsA.repository.DeliverymanRepository;
 
-import com.ufcg.psoft.pitsA.service.deliveryman.DeliverymanPostService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
