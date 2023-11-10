@@ -13,10 +13,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-public class DeliverymanServicePostTests {
+public class DeliverymanPostServiceTests {
 
     @Autowired
-    private DeliverymanServicePost driver;
+    private DeliverymanPostService driver;
 
     @Autowired
     private DeliverymanRepository deliverymanRepository;
