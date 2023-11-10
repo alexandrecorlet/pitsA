@@ -7,6 +7,8 @@ import jakarta.persistence.Embeddable;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
+import java.util.Objects;
+
 @Embeddable
 public class Vehicle {
 
@@ -56,4 +58,15 @@ public class Vehicle {
         this.color = color;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Vehicle vehicle)) return false;
+        return Objects.equals(licensePlate, vehicle.licensePlate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(licensePlate);
+    }
 }
