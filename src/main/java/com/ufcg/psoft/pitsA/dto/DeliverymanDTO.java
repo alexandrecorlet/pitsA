@@ -58,10 +58,12 @@ public class DeliverymanDTO {
 
     @Override
     public String toString() {
-        return "DeliverymanDTO{" +
-                "name='" + name + '\'' +
-                ", vehicle=" + vehicle +
+
+        return "DeliverymanDTO{" + '\n' +
+                "name=" + name + ',' + '\n' +
+                "vehicle=" + vehicle + '\n' +
                 '}';
+
     }
 
 }
