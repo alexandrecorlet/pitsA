@@ -22,10 +22,6 @@ public class DeliverymanDTO {
     @NotNull(message = "Vehicle must not be null.")
     private Vehicle vehicle;
 
-    @JsonIgnore
-    @Nullable
-    private Long id;
-
     public DeliverymanDTO() {
 
     }
@@ -48,10 +44,6 @@ public class DeliverymanDTO {
         this.name = name;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public Vehicle getVehicle() {
         return vehicle;
     }
@@ -63,11 +55,6 @@ public class DeliverymanDTO {
     public String getName() {
         return name;
     }
-
-    public Long getId() {
-        return id;
-    }
-
 
     @Override
     public String toString() {

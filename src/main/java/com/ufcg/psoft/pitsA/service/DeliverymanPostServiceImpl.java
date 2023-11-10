@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DeliverymanAddServiceImpl implements DeliverymanAddService {
+public class DeliverymanServicePostImpl implements DeliverymanServicePost {
 
     @Autowired
     private DeliverymanRepository deliverymanRepository;
@@ -18,7 +18,7 @@ public class DeliverymanAddServiceImpl implements DeliverymanAddService {
     private ModelMapper modelMapper;
 
     @Override
-    public DeliverymanDTO add(DeliverymanDTO deliverymanDTO) {
+    public DeliverymanDTO post(DeliverymanDTO deliverymanDTO) {
         Deliveryman deliveryman = new Deliveryman(
                 deliverymanDTO.getName(),
                 deliverymanDTO.getPassword(),

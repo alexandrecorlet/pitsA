@@ -3,8 +3,8 @@ package com.ufcg.psoft.pitsA.service;
 import com.ufcg.psoft.pitsA.dto.DeliverymanDTO;
 
 @FunctionalInterface
-public interface DeliverymanAddService {
+public interface DeliverymanServicePost {
 
-    public DeliverymanDTO add(DeliverymanDTO deliverymanDTO);
+    public DeliverymanDTO post(DeliverymanDTO deliverymanDTO);
 
 }
