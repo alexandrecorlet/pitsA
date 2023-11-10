@@ -21,9 +21,6 @@ public class DeliverymanPostServiceTests {
     @Autowired
     private DeliverymanRepository deliverymanRepository;
 
-    @Autowired
-    private ModelMapper modelMapper;
-
     private Vehicle vehicle;
 
     private DeliverymanDTO deliverymanDTO;
