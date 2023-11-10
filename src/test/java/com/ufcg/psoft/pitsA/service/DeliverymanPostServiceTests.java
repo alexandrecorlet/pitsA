@@ -68,5 +68,4 @@ public class DeliverymanPostServiceTests {
         assertEquals(2, deliverymanRepository.findAll().size());
     }
 
-    // TODO: Test exceptions
 }
